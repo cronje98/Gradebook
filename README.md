@@ -17,7 +17,7 @@ A personal web app built with Flask and SQLite to help tutors track and manage s
 
 ## Updates to come
 - Delete Entries
-- Export Students and marks in file
+- Exporting file with student marks
   
 ## Privacy Note
 
