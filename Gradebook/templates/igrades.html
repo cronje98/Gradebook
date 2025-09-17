@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> Taskly </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+     <a href="{{ url_for('home') }}">
+            <button type ="button">Back</button>
+    </a>
+    <div class="container">
+        <h1> I N F O R M A T I O N - T E C H N O L O G Y</h1>
+        <p>2025</p>
+   
+    </div>
+
+
+    <!--gbottom class for bottom half of webpage-->
+    <div class="gbottom">
+    
+    <!--Below Content for the submit buttons and table display for IT-->
+    <div class ="msubmit">
+        <form method="Post" action="{{ url_for('igrades') }}"> 
+            
+            <input type="text" id="student" name="Student" placeholder="Add Student" required><br>
+            <input type="text" id="percentage" name="Percentage" placeholder="Percentage" required><br>
+            <input type="submit" value="Submit" > 
+
+        </form>
+    </div>
+
+    <br>
+
+    <div class ="mtable">
+
+    
+    
+        <table border="1">
+        <tr>
+       
+            <th>Student</th>
+            <th> IT%</th>
+      
+        </tr>
+        {% for stu in students %}
+        <tr>
+        
+            <td>{{ stu.name }}</td>
+            <td> {{ stu.IT}} </td>
+        
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="3">No tasks found.</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+
+    </div>
+
+
+
+
+</body>
+</html>

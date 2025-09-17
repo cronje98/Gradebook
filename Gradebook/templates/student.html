@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> StudentNames </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <a href="{{ url_for('home') }}">
+            <button type="button">Back</button>
+    </a>
+    <div class ="heading">
+        <h1>Student Names</h1><br>
+         
+    </div>
+
+    <div class="bottom">
+        <ol>
+            {% for na in tasks %}
+                <li>{{ na.name }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+</body>
+</html>

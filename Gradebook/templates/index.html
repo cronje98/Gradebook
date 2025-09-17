@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> Gradebook </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1> G R A D E B O O K</h1>
+        <p> Mathematics and Information Technology marks<br> 2025</p>
+        
+    </div>
+
+    <!--Bottom-section for bottom-half of home webpage -->
+    <div class="bottom-section">
+        <div class="box">
+            <h3>REGISTRY</h3>
+            <a href="{{ url_for('studentList') }}">
+                <button type="button">View Student List</button>
+            </a>
+            <form method="Post" action="/add">
+                
+                <input type="text" id="student" name="Student" placeholder="Add Student" required><br>
+                <input type="submit" value="Submit" > 
+            </form>
+        </div>
+
+
+        <!-- Buttons under Administration with links to their html pages -->
+        <div class="box">
+            <h3>ADMINISTRATION</h3>
+            <a href="{{ url_for('mgrades') }}">
+                <button type ="button">Mathematics Grades</button>
+            </a>
+
+            <a href="{{ url_for('igrades') }}">
+                <button type="button">Information Techonology Grades</button>
+            </a>
+        </div>
+
+
+    </div>
+   
+    </div>
+    
+
+
+</body>
+</html>
